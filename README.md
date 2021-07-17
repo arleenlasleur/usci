@@ -74,7 +74,7 @@ __NOTE: this info is mostly useless, many mainboards observe output logic, so fo
   
 Credits:
   
-shajeebtm: Arduino 32-band audio spectrum analyzer
+shajeebtm: Arduino 32-band audio spectrum analyzer  
 victornpb: manchester decoder/js encoder
   
   
@@ -154,5 +154,5 @@ https://github.com/kosme/arduinoFFT
   
 ## Исходники:
   
-shajeebtm: Arduino 32-полосный анализатор спектра на аудиодиапазон
+shajeebtm: Arduino 32-полосный анализатор спектра на аудиодиапазон  
 victornpb: кодек manchester на js/wiring
