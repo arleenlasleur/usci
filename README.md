@@ -34,11 +34,11 @@ Shown in sch_mixer.svg
 ## Code generation:
   
 1. Modify $payload variable in man_conv.php
-2. Execute:
-   php man_conv.php
+2. Execute:  
+   php man_conv.php  
    This will write new text to man_code.txt
-3. Execute:
-   domanch.bat
+3. Execute:  
+   domanch.bat  
    This will concat pieces of mark/space/double mark/double space into one single code wave, then convert it in mp3.
   
 If you want singlequery HTML frontend, you can reencode mp3 files to base64 and paste it in HTML <audio> src= attr, but make sure it's short enough to fit in 64Kbyte since data-URI of HTML won't accept URI bigger than 64Kb.
@@ -114,11 +114,11 @@ https://github.com/kosme/arduinoFFT
 ## Изготовление кодов:
   
 1. Отредактируйте переменную $payload в файле man_conv.php
-2. Запустите:
-   php man_conv.php
+2. Запустите:  
+   php man_conv.php  
    Сценарий запишет новый текст кодов в файле man_code.txt
-3. Запустите:
-   domanch.bat
+3. Запустите:  
+   domanch.bat  
    Эти команды склеят отдельные звуки тонов/пробелов в единый WAV файл, затем конвертируемый в mp3.
   
 Если вам нужен HTML без включений (в один запрос), можно перевести mp3 звуки в base64 а затем вставить в атрибут src= HTML-тегов <audio> в виде data-URI строк, но они должны умещаться в 64 килобайта (таковые не могут превышать 64 Кб)
