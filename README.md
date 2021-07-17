@@ -45,13 +45,11 @@ If you want singlequery HTML frontend, you can reencode mp3 files to base64 and 
   
 ## Example HTML:
 
-`  
-                                    |------------- 64 Kb max  --------------|  
-<audio controls>                   \/                                       |  
-<source src="data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU3    |  
-//////more//base64//data//here////////VVVVVVVVVVVVVVVVVVVVVVVVVVU=" />      |  
-</audio>                                                         ^-----------  
-`
+                                        |------------- 64 Kb max  --------------|
+    <audio controls>                   \/                                       |
+    <source src="data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU3    |
+    //////more//base64//data//here////////VVVVVVVVVVVVVVVVVVVVVVVVVVU=" />      |
+    </audio>                                                         ^-----------
   
 ## Protocol:
   
@@ -127,13 +125,11 @@ https://github.com/kosme/arduinoFFT
   
 ## Образец HTML:
   
-`
-                                    |------------- 64 Kb max  --------------|  
-<audio controls>                   \/                                       |  
-<source src="data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU3    |  
-//////more//base64//data//here////////VVVVVVVVVVVVVVVVVVVVVVVVVVU=" />      |  
-</audio>                                                         ^-----------  
-`
+                                        |------------- 64 Kb max  --------------|
+    <audio controls>                   \/                                       |
+    <source src="data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU3    |
+    //////more//base64//data//here////////VVVVVVVVVVVVVVVVVVVVVVVVVVU=" />      |
+    </audio>                                                         ^-----------
   
 ## Протокол:
   
