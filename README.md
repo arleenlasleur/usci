@@ -1,9 +1,9 @@
 # PC to Arduino ultrasonic command interface
   
-**This project is using these Arduino libraries:**
-https://gist.github.com/WinstonArrocena/50f5c561868717effdc0 (TM1637.cpp)
-https://gist.github.com/WinstonArrocena/0e4e4f8976ed482544eb (TM1637.h)
-https://github.com/kosme/arduinoFFT
+**This project is using these Arduino libraries:**  
+https://gist.github.com/WinstonArrocena/50f5c561868717effdc0 (TM1637.cpp)  
+https://gist.github.com/WinstonArrocena/0e4e4f8976ed482544eb (TM1637.h)  
+https://github.com/kosme/arduinoFFT  
   
 This project is attempt to remote control some Arduino-driven device via PC, without interfacing through USB (with necessary drivers), Eth LAN or WLAN. The only adapter device is audiomixer, compound of some resistors.
   
@@ -44,12 +44,13 @@ Shown in sch_mixer.svg
 If you want singlequery HTML frontend, you can reencode mp3 files to base64 and paste it in HTML <audio> src= attr, but make sure it's short enough to fit in 64Kbyte since data-URI of HTML won't accept URI bigger than 64Kb.
   
 ## Example HTML:
+
 `  
-                                    |------------- 64 Kb max  --------------|
-<audio controls>                   \/                                       |
-<source src="data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU3    |
-//////more//base64//data//here////////VVVVVVVVVVVVVVVVVVVVVVVVVVU=" />      |
-</audio>                                                         ^-----------
+                                    |------------- 64 Kb max  --------------|  
+<audio controls>                   \/                                       |  
+<source src="data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU3    |  
+//////more//base64//data//here////////VVVVVVVVVVVVVVVVVVVVVVVVVVU=" />      |  
+</audio>                                                         ^-----------  
 `
   
 ## Protocol:
@@ -59,18 +60,18 @@ First 1111 is carrier hijack (manchester decode process training T and 2T timing
 ## ATX-flavor onboard audio connector (case front panel connector):
   
 `
- pin  HDA:           AC97:          post-2018 HDA:  +--------+
-                                                    | 2   10 |
-  1   Mic2_l         Mic            Mic2_L          | :::.:  |
-  2   Gnd            Gnd            Gnd             | 1   9  |
-  3   Mic2_R         Mic power      Mic2_R          +--------+
-  4   -Acz_det       NC             -Acz_det
-  5   Line2_R        Line out(r)    Line2_R     MB output logic:
-  6   Gnd            NC             Sen1_Ret
-  7   FAudio_JD      NC             Sens_Send   Microphonic devices may record from Mic2 when Sens_Send-to-Sen1_Ret
-  8   -----          -----          -----        circuit closed, do not record when open
-  9   Line2_L        Line out(l)    Line2_L     Speaking devices may play to Line2 when Sens_Send-to-Sen2_Ret
-  10  Gnd            NC             Sen2_Ret     circuit closed, do not play when open
+ pin  HDA:           AC97:          post-2018 HDA:  +--------+  
+                                                    | 2   10 |  
+  1   Mic2_l         Mic            Mic2_L          | :::.:  |  
+  2   Gnd            Gnd            Gnd             | 1   9  |  
+  3   Mic2_R         Mic power      Mic2_R          +--------+  
+  4   -Acz_det       NC             -Acz_det  
+  5   Line2_R        Line out(r)    Line2_R     MB output logic:  
+  6   Gnd            NC             Sen1_Ret  
+  7   FAudio_JD      NC             Sens_Send   Microphonic devices may record from Mic2 when Sens_Send-to-Sen1_Ret  
+  8   -----          -----          -----        circuit closed, do not record when open  
+  9   Line2_L        Line out(l)    Line2_L     Speaking devices may play to Line2 when Sens_Send-to-Sen2_Ret  
+  10  Gnd            NC             Sen2_Ret     circuit closed, do not play when open  
 `
   
 __NOTE: this info is mostly useless, many mainboards observe output logic, so for desktop applications you need to use stereo doubler connector (1 jack to 2 sockets).__
@@ -83,10 +84,10 @@ victornpb: manchester decoder/js encoder
   
 # Arduino ультразвуковой командный интерфейс для ПК
   
-**Используемые Arduino библиотеки:**
-https://gist.github.com/WinstonArrocena/50f5c561868717effdc0 (TM1637.cpp)
-https://gist.github.com/WinstonArrocena/0e4e4f8976ed482544eb (TM1637.h)
-https://github.com/kosme/arduinoFFT
+**Используемые Arduino библиотеки:**  
+https://gist.github.com/WinstonArrocena/50f5c561868717effdc0 (TM1637.cpp)  
+https://gist.github.com/WinstonArrocena/0e4e4f8976ed482544eb (TM1637.h)  
+https://github.com/kosme/arduinoFFT  
   
 Этот проект демонстрирует управление в обход любых способов, требующих специального драйвера/оборудования. Переходник представляет собой обычный смеситель аудио на резисторах.
   
@@ -127,12 +128,13 @@ https://github.com/kosme/arduinoFFT
 Если вам нужен HTML без включений (в один запрос), можно перевести mp3 звуки в base64 а затем вставить в атрибут src= HTML-тегов <audio> в виде data-URI строк, но они должны умещаться в 64 килобайта (таковые не могут превышать 64 Кб)
   
 ## Образец HTML:
+  
 `
-                                    |------------- 64 Kb max  --------------|
-<audio controls>                   \/                                       |
-<source src="data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU3    |
-//////more//base64//data//here////////VVVVVVVVVVVVVVVVVVVVVVVVVVU=" />      |
-</audio>                                                         ^-----------
+                                    |------------- 64 Kb max  --------------|  
+<audio controls>                   \/                                       |  
+<source src="data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU3    |  
+//////more//base64//data//here////////VVVVVVVVVVVVVVVVVVVVVVVVVVU=" />      |  
+</audio>                                                         ^-----------  
 `
   
 ## Протокол:
@@ -142,18 +144,18 @@ https://github.com/kosme/arduinoFFT
 ## Разъём аудио ATX-подобных системных плат (он же разъём аудио для передней панели):
   
 `
- pin  HDA:           AC97:          post-2018 HDA:  +--------+
-                                                    | 2   10 |
-  1   Mic2_l         Mic            Mic2_L          | :::.:  |
-  2   Gnd            Gnd            Gnd             | 1   9  |
-  3   Mic2_R         Mic power      Mic2_R          +--------+
-  4   -Acz_det       NC             -Acz_det
-  5   Line2_R        Line out(r)    Line2_R     Логика вывода платы:
-  6   Gnd            NC             Sen1_Ret
-  7   FAudio_JD      NC             Sens_Send   Звук с устройств на линии Mic2 поступает в систему, если цепь
-  8   -----          -----          -----        Sens_Send-Sen1_Ret замкнута, не участвуют если разомкнута
-  9   Line2_L        Line out(l)    Line2_L     Звук выводится из системы в устройства на линии Line2, если цепь
-  10  Gnd            NC             Sen2_Ret     Sens_Send-Sen2_Ret замкнута, не выводится если разомкнута
+ pin  HDA:           AC97:          post-2018 HDA:  +--------+  
+                                                    | 2   10 |  
+  1   Mic2_l         Mic            Mic2_L          | :::.:  |  
+  2   Gnd            Gnd            Gnd             | 1   9  |  
+  3   Mic2_R         Mic power      Mic2_R          +--------+  
+  4   -Acz_det       NC             -Acz_det  
+  5   Line2_R        Line out(r)    Line2_R     Логика вывода платы:  
+  6   Gnd            NC             Sen1_Ret  
+  7   FAudio_JD      NC             Sens_Send   Звук с устройств на линии Mic2 поступает в систему, если цепь  
+  8   -----          -----          -----        Sens_Send-Sen1_Ret замкнута, не участвуют если разомкнута  
+  9   Line2_L        Line out(l)    Line2_L     Звук выводится из системы в устройства на линии Line2, если цепь  
+  10  Gnd            NC             Sen2_Ret     Sens_Send-Sen2_Ret замкнута, не выводится если разомкнута  
 `
   
 Этот разъём обычно бесполезен для настольных приложений, т. к. большинство плат соблюдают логику коммутации, т. е. невозможно получить звук на переднем и заднем выходах одновременно (для этих случаев, имеет смысл использовать стерео раздвоитель).
