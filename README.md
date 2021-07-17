@@ -7,7 +7,7 @@ https://github.com/kosme/arduinoFFT
   
 This project is attempt to remote control some Arduino-driven device via PC, without interfacing through USB (with necessary drivers), Eth LAN or WLAN. The only adapter device is audiomixer, compound of some resistors.
   
-## Controls: (in usci\usci.ino file)
+## Controls: (in usci.ino file)
   
 #define SAMPLES     (64)  // 2^n    - FFT size  
 #define HFVOL_THR   (65)  // 0..127 - volume threshold of carrier signal  
@@ -87,7 +87,7 @@ https://github.com/kosme/arduinoFFT
   
 Этот проект демонстрирует управление в обход любых способов, требующих специального драйвера/оборудования. Переходник представляет собой обычный смеситель аудио на резисторах.
   
-## Параметры: (в файле usci\usci.ino)
+## Параметры: (в файле usci.ino)
   
 #define SAMPLES     (64)  // 2^n    - ширина окна БПФ  
 #define HFVOL_THR   (65)  // 0..127 - порог громкости несущего сигнала  
