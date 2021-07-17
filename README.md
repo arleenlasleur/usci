@@ -9,8 +9,8 @@ This project is attempt to remote control some Arduino-driven device via PC, wit
   
 ## Controls: (in usci\usci.ino file)
   
-#define SAMPLES     (64)  // 2^n    - FFT size
-#define HFVOL_THR   (65)  // 0..127 - volume threshold of carrier signal
+#define SAMPLES     (64)  // 2^n    - FFT size  
+#define HFVOL_THR   (65)  // 0..127 - volume threshold of carrier signal  
   
 ## Debugging/tuning:
   
@@ -59,20 +59,18 @@ First 1111 is carrier hijack (manchester decode process training T and 2T timing
   
 ## ATX-flavor onboard audio connector (case front panel connector):
   
-`
- pin  HDA:           AC97:          post-2018 HDA:  +--------+  
-                                                    | 2   10 |  
-  1   Mic2_l         Mic            Mic2_L          | :::.:  |  
-  2   Gnd            Gnd            Gnd             | 1   9  |  
-  3   Mic2_R         Mic power      Mic2_R          +--------+  
-  4   -Acz_det       NC             -Acz_det  
-  5   Line2_R        Line out(r)    Line2_R     MB output logic:  
-  6   Gnd            NC             Sen1_Ret  
-  7   FAudio_JD      NC             Sens_Send   Microphonic devices may record from Mic2 when Sens_Send-to-Sen1_Ret  
-  8   -----          -----          -----        circuit closed, do not record when open  
-  9   Line2_L        Line out(l)    Line2_L     Speaking devices may play to Line2 when Sens_Send-to-Sen2_Ret  
-  10  Gnd            NC             Sen2_Ret     circuit closed, do not play when open  
-`
+    pin  HDA:           AC97:          post-2018 HDA:  +--------+
+                                                       | 2   10 |
+     1   Mic2_l         Mic            Mic2_L          | :::.:  |
+     2   Gnd            Gnd            Gnd             | 1   9  |
+     3   Mic2_R         Mic power      Mic2_R          +--------+
+     4   -Acz_det       NC             -Acz_det
+     5   Line2_R        Line out(r)    Line2_R     MB output logic:
+     6   Gnd            NC             Sen1_Ret
+     7   FAudio_JD      NC             Sens_Send   Microphonic devices may record from Mic2 when Sens_Send-to-Sen1_Ret
+     8   -----          -----          -----        circuit closed, do not record when open
+     9   Line2_L        Line out(l)    Line2_L     Speaking devices may play to Line2 when Sens_Send-to-Sen2_Ret
+     10  Gnd            NC             Sen2_Ret     circuit closed, do not play when open
   
 __NOTE: this info is mostly useless, many mainboards observe output logic, so for desktop applications you need to use stereo doubler connector (1 jack to 2 sockets).__
   
@@ -93,8 +91,8 @@ https://github.com/kosme/arduinoFFT
   
 ## Параметры: (в файле usci\usci.ino)
   
-#define SAMPLES     (64)  // 2^n    - ширина окна БПФ
-#define HFVOL_THR   (65)  // 0..127 - порог громкости несущего сигнала
+#define SAMPLES     (64)  // 2^n    - ширина окна БПФ  
+#define HFVOL_THR   (65)  // 0..127 - порог громкости несущего сигнала  
   
 ## Отладка/настройка:
   
@@ -143,20 +141,18 @@ https://github.com/kosme/arduinoFFT
   
 ## Разъём аудио ATX-подобных системных плат (он же разъём аудио для передней панели):
   
-`
- pin  HDA:           AC97:          post-2018 HDA:  +--------+  
-                                                    | 2   10 |  
-  1   Mic2_l         Mic            Mic2_L          | :::.:  |  
-  2   Gnd            Gnd            Gnd             | 1   9  |  
-  3   Mic2_R         Mic power      Mic2_R          +--------+  
-  4   -Acz_det       NC             -Acz_det  
-  5   Line2_R        Line out(r)    Line2_R     Логика вывода платы:  
-  6   Gnd            NC             Sen1_Ret  
-  7   FAudio_JD      NC             Sens_Send   Звук с устройств на линии Mic2 поступает в систему, если цепь  
-  8   -----          -----          -----        Sens_Send-Sen1_Ret замкнута, не участвуют если разомкнута  
-  9   Line2_L        Line out(l)    Line2_L     Звук выводится из системы в устройства на линии Line2, если цепь  
-  10  Gnd            NC             Sen2_Ret     Sens_Send-Sen2_Ret замкнута, не выводится если разомкнута  
-`
+    pin  HDA:           AC97:          post-2018 HDA:  +--------+
+                                                       | 2   10 |
+     1   Mic2_l         Mic            Mic2_L          | :::.:  |
+     2   Gnd            Gnd            Gnd             | 1   9  |
+     3   Mic2_R         Mic power      Mic2_R          +--------+
+     4   -Acz_det       NC             -Acz_det
+     5   Line2_R        Line out(r)    Line2_R     Логика вывода платы:
+     6   Gnd            NC             Sen1_Ret
+     7   FAudio_JD      NC             Sens_Send   Звук с устройств на линии Mic2 поступает в систему, если цепь
+     8   -----          -----          -----        Sens_Send-Sen1_Ret замкнута, не участвуют если разомкнута
+     9   Line2_L        Line out(l)    Line2_L     Звук выводится из системы в устройства на линии Line2, если цепь
+     10  Gnd            NC             Sen2_Ret     Sens_Send-Sen2_Ret замкнута, не выводится если разомкнута
   
 Этот разъём обычно бесполезен для настольных приложений, т. к. большинство плат соблюдают логику коммутации, т. е. невозможно получить звук на переднем и заднем выходах одновременно (для этих случаев, имеет смысл использовать стерео раздвоитель).
   
