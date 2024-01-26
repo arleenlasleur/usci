@@ -3,7 +3,7 @@ if(PHP_SAPI !== 'cli') return;
 
 $preamble = "11110100";
 $padding  = "00000000";
-$payload  = "abg";
+$payload  = "2";
 
 $msg="";
 for($i=0;$i<strlen($payload);$i++){   // text2bin
