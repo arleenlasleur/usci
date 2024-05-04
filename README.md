@@ -24,7 +24,7 @@ Shown in sch_mixer.svg
   
 - working audio output on any OS (Windows, Debian, DOS etc)
 - ability to emit ultrasound (above 18 kHz). This may be overridden by altering input files for low-end audiocards.   To prevent audio clicks, fronts and falls of carrier tone could be faded in/out. The files shipped come in PCM16LE-44100 wave, tone recorded is 18500 Hz.
-- reasonable jitter, not ruining mark signals front/back porch. If your audio doesn't allow signal to pass through, try generating more long mark/space files. Longer chunks means more readability as well as lower speed. That's the effect of manchester code (it requires high stability of T and 2T periods).
+- reasonable jitter, not ruining mark signals front/back edges. If your audio doesn't allow signal to pass through, try generating more long mark/space files. Longer chunks means more readability as well as lower speed. That's the effect of manchester code (it requires high stability of T and 2T periods).
   
 ## Tools used:
   
@@ -104,7 +104,7 @@ https://github.com/kosme/arduinoFFT
   
 - работающий аудиодрайвер, на любой ОС
 - способность звуковой карты воспроизводить в УЗ полосе частот (выше 18 кГц). Это ограничение можно преодолеть, изготовив новые звуки для аудиокарт низшего класса. Во избежание щелчков на записи, фронты/спады несущего сигнала можно подвергнуть фильтру fadein/fadeout. Приложенные файлы являются целочисленным PCM 16 бит с дискретизацией 44100 (стандартный WAV файл Microsoft CD-качества), записанный тон 18500 Гц.
-- вменяемый аудиотракт, джиттер которого из-за переходных процессов не размажет фронты/спады сигнала. Если звук не может пройти в ваших условиях, попробуйте создать звуки с более длинными/низкочастотными тонами/паузами. Более длинные куски более читаемы, но медленнее воспроизводятся. Этот эффект накладывает код Manchester, требовательный к соблюдению периодов бита и полубита.
+- вменяемый аудиотракт, джиттер которого из-за переходных процессов не размажет фронты/спады сигнала. Если звук не может пройти в ваших условиях, попробуйте создать звуки с более длинными/низкочастотными тонами/паузами. Более д  линные куски более читаемы, но медленнее воспроизводятся. Этот эффект накладывает код Manchester, требовательный к соблюдению периодов бита и полубита.
   
 ## Инструменты:
   
